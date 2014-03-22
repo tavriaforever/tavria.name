@@ -12,7 +12,70 @@
     content: [
         {
             block: 'vcard',
-            content: 'vcard'
+            content: [
+                {
+                    elem: 'switch-hidden',
+                    attrs: { id: 'vcard-ru' }
+                },
+                {
+                    elem: 'switch-hidden',
+                    attrs: { id: 'vcard-en' }
+                },
+                {
+                    elem: 'switch',
+                    content: [
+                        {
+                            elem: 'switch-link',
+                            url: '#vcard-ru',
+                            content: 'ru'
+                        },
+                        {
+                            elem: 'switch-link',
+                            url: '#vcard-en',
+                            content: 'en'
+                        }
+                    ]
+                },
+                {
+                    elem: 'content',
+                    elemMods: { lang: 'ru' },
+                    content: [
+                        {
+                           elem: 'text',
+                           content: [
+                                {
+                                    elem: 'logo'
+                                },
+                                {
+                                    elem: 'info',
+                                    content: [
+                                        {
+                                            elem: 'name',
+                                            content: 'Николай Ильченко'
+                                        }
+                                    ]
+                                }
+                           ]
+                        },
+                        {
+                            elem: 'arrow'
+                        }
+                    ]
+                },
+                {
+                    elem: 'content',
+                    elemMods: { lang: 'en' },
+                    content: [
+                        {
+                           elem: 'info',
+                           content: 'some text in en'
+                        },
+                        {
+                            elem: 'arrow'
+                        }
+                    ]
+                }
+            ]
         }
     ]
 });

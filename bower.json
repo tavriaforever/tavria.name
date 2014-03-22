@@ -1,0 +1,7 @@
+{
+    "name": "enb-stub",
+    "private": true,
+    "dependencies": {
+        "bem-core": "2.0.0"
+    }
+}

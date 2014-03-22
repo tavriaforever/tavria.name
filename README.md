@@ -1,4 +1,9 @@
-tavria.name
-===========
+developing in progress
 
-personal vcard develop with BEM help
+# tavria.name
+
+## Use for built page:
+- bem
+- enb
+- bem-core
+- ym

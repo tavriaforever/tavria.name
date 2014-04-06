@@ -1,6 +1,6 @@
 ({
     block: 'page',
-    title: 'Title of the page',
+    title: 'Николай Ильченко — yndx.tavria@yandex.ru',
     favicon: '/favicon.ico',
     head: [
         { elem: 'meta', attrs: { name: 'description', content: '' }}
@@ -14,66 +14,33 @@
             block: 'vcard',
             content: [
                 {
-                    elem: 'switch-hidden',
-                    attrs: { id: 'vcard-ru' }
-                },
-                {
-                    elem: 'switch-hidden',
-                    attrs: { id: 'vcard-en' }
-                },
-                {
-                    elem: 'switch',
-                    content: [
-                        {
-                            elem: 'switch-link',
-                            url: '#vcard-ru',
-                            content: 'ru'
-                        },
-                        {
-                            elem: 'switch-link',
-                            url: '#vcard-en',
-                            content: 'en'
+                    elem: 'layout',
+                    attrs: { 'data-lang': 'ru' },
+                    info: {
+                        name: 'Николай Ильченко',
+                        about: 'Фронтэнд-разработчик. С 2013 года работаю в Яндексе. Нравится выбранная профессия, люди с юмором и всевозможные «rocket science» штуки.',
+                        company: 'www.yandex.ru',
+                        person: {
+                            email: 'yndx.tavria@yandex.ru',
+                            github: 'tavriaforever',
+                            twitter: 'tavriaforever',
+                            habr: 'tavriaforever',
+                            linkedin: 'nickolay-ilchenko/92/692/743'
                         }
-                    ]
+                    }
                 },
                 {
-                    elem: 'content',
-                    elemMods: { lang: 'ru' },
-                    content: [
-                        {
-                           elem: 'text',
-                           content: [
-                                {
-                                    elem: 'logo'
-                                },
-                                {
-                                    elem: 'info',
-                                    content: [
-                                        {
-                                            elem: 'name',
-                                            content: 'Николай Ильченко'
-                                        }
-                                    ]
-                                }
-                           ]
-                        },
-                        {
-                            elem: 'arrow'
+                    elem: 'layout',
+                    attrs: { 'data-lang': 'ru' },
+                    info: {
+                        name: 'Nikolay Ilchenko',
+                        about: 'Frontend developer. Since 2013 I work in Yandex. The chosen profession, people with humour and various "rocket science" of piece is pleasant.',
+                        company: 'www.yandex.ru',
+                        person: {
+                            email: 'yndx.tavria@yandex.ru',
+                            github: 'tavriaforever'
                         }
-                    ]
-                },
-                {
-                    elem: 'content',
-                    elemMods: { lang: 'en' },
-                    content: [
-                        {
-                           elem: 'info',
-                           content: 'some text in en'
-                        },
-                        {
-                            elem: 'arrow'
-                        }
-                    ]
+                    }
                 }
             ]
         }

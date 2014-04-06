@@ -1,0 +1,12 @@
+block('vcard').elem('layout')(
+	tag()('article'),
+
+	content()([
+		{ block: 'logo' },
+		{
+			block: 'info',
+			content: this.ctx.info
+		},
+		{ elem: 'triangle' }
+	])
+)

@@ -1,1 +1,25 @@
-block('vcard').tag()('section')
+block('vcard')(
+    js()(true),
+
+    tag()('main'),
+
+    content()([
+        { elem: 'switch' },
+        this.ctx.content
+    ]),
+
+    elem('switch').content()(function() {
+
+        var langs = ['ru', 'en'];
+
+        return langs.map(function(lang) {
+            return {
+                block: 'link',
+                mods: { pseudo: 'yes' },
+                attrs: { 'data-lang': lang },
+                mix: [{ block: this.block, elem: 'switch-link' }],
+                content: lang
+            }
+        });
+    })
+);

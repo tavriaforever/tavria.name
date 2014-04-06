@@ -1,0 +1,7 @@
+.vcard__layout
+{
+	.logo
+	{
+		color: red;
+	}
+}

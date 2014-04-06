@@ -6,7 +6,11 @@ module.exports = function(config) {
             use('provider', { target: '?.bemjson.js' }),
             use('bemdecl'),
             use('deps'),
-            use('css'),
+            use('roole', { target: '?.noprefix.css' }),
+            use('autoprefixer', {
+                browserSupport: ['last 2 versions', 'last 3 Chrome versions'],
+                sourceTarget: '?.noprefix.css'
+            }),
             use('js', { target: '?.pre.js' } ),
             use('modules', { target: '?.js', source: '?.pre.js' }),
             use('bemhtml'),
@@ -45,7 +49,8 @@ var techs = {
     copy            : require('enb/techs/file-copy'),
     bemdecl         : require('enb/techs/bemdecl-from-bemjson'),
     deps            : require('enb/techs/deps'),
-    css             : require('enb/techs/css'),
+    roole           : require('enb-roole/techs/css-roole'),
+    autoprefixer    : require('enb-autoprefixer/techs/css-autoprefixer'),
     js              : require('enb-diverse-js/techs/browser-js'),
     modules         : require('enb-modules/techs/prepend-modules'),
     bemhtml         : require('enb-bemxjst/techs/bemhtml-old'),

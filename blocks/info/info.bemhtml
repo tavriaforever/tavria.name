@@ -1,0 +1,29 @@
+block('info')(
+	content()(function() {
+		var content = this.ctx.content;
+
+		return [
+			content.name && {
+				elem: 'name',
+				content: content.name
+			},
+			content.about && {
+				elem: 'about',
+				content: content.about
+			},
+			content.company && {
+				elem: 'company',
+				content: content.company
+			},
+			content.person && {
+				elem: 'person',
+				content: [
+					content.person.email && {
+						elem: 'email',
+						content: content.person.email
+					}
+				]
+			}
+		]
+	})
+);
